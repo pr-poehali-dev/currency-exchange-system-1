@@ -9,6 +9,7 @@ const Index = () => {
 
   const sections = [
     { id: 'title', name: 'Титульный лист', icon: 'FileText' },
+    { id: 'contents', name: 'Содержание', icon: 'List' },
     { id: 'intro', name: 'Введение', icon: 'BookOpen' },
     { id: 'theory', name: 'Теоретическая часть', icon: 'Lightbulb' },
     { id: 'practice', name: 'Практическая часть', icon: 'Code' },
@@ -52,6 +53,197 @@ const Index = () => {
             
             <div className="pt-16">
               <p className="text-sm">Москва 2025</p>
+            </div>
+          </div>
+        );
+        
+      case 'contents':
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-center uppercase tracking-wider mb-12">Содержание</h2>
+            
+            <div className="space-y-3 text-base">
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('intro')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">Введение</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">3</span>
+              </div>
+              
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('theory')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">1</span>
+                  <span className="font-semibold">Теоретическая часть</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">6</span>
+              </div>
+              
+              <div className="ml-8 space-y-2">
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>1.1</span>
+                    <span>Анализ предметной области</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">6</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>1.2</span>
+                    <span>Обзор существующих решений</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">8</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>1.3</span>
+                    <span>Требования к разрабатываемой системе</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">10</span>
+                </div>
+              </div>
+              
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('practice')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">2</span>
+                  <span className="font-semibold">Практическая часть</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">12</span>
+              </div>
+              
+              <div className="ml-8 space-y-2">
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>2.1</span>
+                    <span>Архитектура системы</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">12</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>2.2</span>
+                    <span>Проектирование базы данных</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">14</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>2.3</span>
+                    <span>Основные модули системы</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">16</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>2.4</span>
+                    <span>Реализация ключевых алгоритмов</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">18</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>2.5</span>
+                    <span>Тестирование системы</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">19</span>
+                </div>
+              </div>
+              
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('conclusion')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">Заключение</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">21</span>
+              </div>
+              
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('references')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">Список использованных источников</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">24</span>
+              </div>
+              
+              <div 
+                className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded cursor-pointer transition-colors"
+                onClick={() => setActiveSection('appendix')}
+              >
+                <div className="flex gap-3">
+                  <span className="font-semibold">Приложения</span>
+                </div>
+                <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                <span className="text-muted-foreground">27</span>
+              </div>
+              
+              <div className="ml-8 space-y-2">
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>Приложение А.</span>
+                    <span>Диаграмма вариантов использования</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">27</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>Приложение Б.</span>
+                    <span>ER-диаграмма базы данных</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">28</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>Приложение В.</span>
+                    <span>Пример SQL-запросов</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">29</span>
+                </div>
+                
+                <div className="flex justify-between items-baseline hover:bg-secondary/30 p-2 rounded">
+                  <div className="flex gap-3">
+                    <span>Приложение Г.</span>
+                    <span>Скриншоты интерфейса системы</span>
+                  </div>
+                  <div className="flex-1 mx-4 border-b border-dotted border-muted-foreground/30"></div>
+                  <span className="text-muted-foreground">30</span>
+                </div>
+              </div>
             </div>
           </div>
         );
